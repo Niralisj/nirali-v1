@@ -1,0 +1,274 @@
+.constellation {
+  position: absolute;
+
+  right: 8%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 380px;
+
+  opacity: 0.9;
+}
+
+.constellation svg {
+  width: 100%;
+  height: auto;
+
+  overflow: visible;
+}
+
+
+.star {
+  fill: #007acc;
+
+  opacity: 0;
+
+  filter: drop-shadow(0 0 5px #007acc);
+
+  animation:
+    starAppear 0.6s ease forwards,
+    twinkle 3s ease-in-out infinite;
+}
+
+
+/* Make stars appear one after another */
+
+.star-1 {
+  animation-delay: 0.2s, 2s;
+}
+
+.star-2 {
+  animation-delay: 0.4s, 2.2s;
+}
+
+.star-3 {
+  animation-delay: 0.6s, 2.4s;
+}
+
+.star-4 {
+  animation-delay: 0.8s, 2.6s;
+}
+
+.star-5 {
+  animation-delay: 1s, 2.8s;
+}
+
+.star-6 {
+  animation-delay: 1.2s, 3s;
+}
+
+.star-7 {
+  animation-delay: 1.4s, 3.2s;
+}
+
+.star-8 {
+  animation-delay: 1.6s, 3.4s;
+}
+
+.star-9 {
+  animation-delay: 1.8s, 3.6s;
+}
+
+.star-10 {
+  animation-delay: 2s, 3.8s;
+}
+
+.star-11 {
+  animation-delay: 2.2s, 4s;
+}
+
+
+
+.star-line {
+  stroke: #007acc;
+
+  stroke-width: 1;
+
+  opacity: 0;
+
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+
+  animation: drawLine 0.8s ease forwards;
+}
+
+
+/* Lines appear sequentially */
+
+.line-1 {
+  animation-delay: 1.1s;
+}
+
+.line-2 {
+  animation-delay: 1.3s;
+}
+
+.line-3 {
+  animation-delay: 1.5s;
+}
+
+.line-4 {
+  animation-delay: 1.7s;
+}
+
+.line-5 {
+  animation-delay: 1.9s;
+}
+
+.line-6 {
+  animation-delay: 2.1s;
+}
+
+.line-7 {
+  animation-delay: 2.3s;
+}
+
+.line-8 {
+  animation-delay: 2.5s;
+}
+
+.line-9 {
+  animation-delay: 2.7s;
+}
+
+.line-10 {
+  animation-delay: 2.9s;
+}
+
+
+.constellation-note {
+  margin-top: -30px;
+
+  text-align: center;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  font-style: italic;
+
+  cursor: default;
+
+  opacity: 0;
+
+  animation: questionAppear 1s ease forwards;
+  animation-delay: 3.2s;
+}
+
+.question,
+.answer {
+  transition: opacity 0.5s ease;
+}
+
+.question {
+  color: #8b949e;
+}
+
+.answer {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  color: #a9c8dd;
+
+  opacity: 0;
+}
+
+.constellation-note:hover .question {
+  opacity: 0;
+}
+
+.constellation-note:hover .answer {
+  opacity: 1;
+}
+
+@keyframes questionAppear {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+}
+
+
+
+@keyframes starAppear {
+
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+}
+
+
+@keyframes drawLine {
+
+  from {
+    opacity: 0;
+    stroke-dashoffset: 200;
+  }
+
+  to {
+    opacity: 0.6;
+    stroke-dashoffset: 0;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  .constellation {
+    left: 2%;
+
+    width: 230px;
+
+    opacity: 0.6;
+  }
+
+}
+
+
+
+
+@media (max-width: 650px) {
+
+  .constellation {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    transform: none;
+
+    width: 220px;
+
+    margin: 0 auto 30px;
+  }
+
+}
+
