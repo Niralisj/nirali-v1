@@ -1,6 +1,4 @@
-# ✦ nirali-main
-
-A personal portfolio website (v2)
+ ✦ the newest version of my personal website.
 
 
 ![Portfolio Preview](./src/assets/preview.png)
