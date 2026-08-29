@@ -1,7 +1,7 @@
  ✦ the newest version of my personal website.
 
 
-![Portfolio Preview](./src/assets/preview.png)
+
 
 ## 🛠 Tech Stack
 
