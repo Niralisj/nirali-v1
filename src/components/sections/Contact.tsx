@@ -7,10 +7,9 @@ function Contact() {
     <section id="contact">
       <div className="contact-container">
         <span className="section-title">/ contact</span>
-        <h2>Let's build something together.</h2>
+        <h2>Find me here</h2>
         <p>
-          Whether it's an internship, collaboration, or just talking about
-          design, React or weird side projects—I’m always happy to connect.
+          Feel free to reach out for opportunities or project discussions.
         </p>
         <a href="mailto:niralipandey3@gmail.com" className="contact-button">
           <Mail size={18} />
@@ -23,7 +22,7 @@ function Contact() {
           <a href="https://linkedin.com/in/niralipandey3" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={22} />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/nirii.ai?stkn=MWxmNHM5Mno2Y2pqeg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
             <FaInstagram size={22} />
           </a>
         </div>

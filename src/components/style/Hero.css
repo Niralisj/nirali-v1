@@ -48,11 +48,34 @@
 }
 
 .button {
+  position: relative;
+  overflow: hidden;
   padding: 13px 22px;
-  font-size: 13px;
-  font-weight: 700;
-  border: 1px solid var(--accent);
-  transition: 0.25s;
+  border-radius: 999px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.18),
+    transparent
+  );
+  transform: translateX(-120%);
+  transition: .6s;
+}
+
+.button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(90,167,255,.25);
+}
+
+.button:hover::before {
+  transform: translateX(120%);
 }
 
 .primary {

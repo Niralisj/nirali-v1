@@ -1,4 +1,5 @@
 import "../style/About.css";
+import profile from "../../assets/images/n.jpg";
 
 const About = () => {
   const techStack = [
@@ -19,21 +20,15 @@ const About = () => {
 
       <div className="about-content">
         <div className="about-description">
-          <p>
-            Hey, I’m <b>Nirali</b> — an MCA student and software developer based
-            I enjoy building full-stack applications that are as
-            thoughtful in design as they are in functionality.
+          
+        <p>
+            I'm currently pursuing my Master's while
+            building small creative projects that help me grow as a developer.
           </p>
-
-          <p>
-            Lately I've been obsessed with React, machine learning, and creating
-            projects that solve small everyday problems. I'm also learning in
-            public by writing on Medium and sharing my journey through Instagram
-            content.
-          </p>
+         
 
           <p className="tech-title">
-            Technologies I enjoy working with:
+            Technologies I have been working with:
           </p>
 
           <ul className="tech-stack">
@@ -41,16 +36,16 @@ const About = () => {
               <li key={tech}>{tech}</li>
             ))}
           </ul>
-
-          <p>
-            Outside of coding, I redesign interfaces for fun, collect random
-            project ideas at 2 AM, and believe the best way to learn is by
-            building things from scratch.
+             <p>
+            Outside of coding, I read science books, learn video editing, and
+            oh yes I make content too.
           </p>
+         
         </div>
 
+
         <div className="about-image">
-          <img src="/assets/me.jpg" alt="Nirali" />
+          <img src={profile} alt="Nirali" />
         </div>
       </div>
     </section>
@@ -58,3 +53,7 @@ const About = () => {
 };
 
 export default About;
+
+
+
+
