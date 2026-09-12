@@ -14,12 +14,6 @@
 
 
 
-### About
-
-
-<img width="1872" height="827" alt="w2" src="https://github.com/user-attachments/assets/0edd6eef-a520-46d1-94d1-f35737b41236" />
-
-
 ---
 
 ## Tech Stack
