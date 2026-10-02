@@ -1,55 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Proza+Libre:wght@400;500;600&display=swap");
-
-:root {
-  --bg: #0f0e24;
-  --surface: #15162f;
-
-  --text: #c9d1d9;
-  --text-light: #8b949e;
-  --heading: #e6edf3;
-
-  --accent: #5aa7ff;
-  --accent-hover: #78b8ff;
-  --border: #21262d;
-
-  --font-heading: "Cormorant Garamond", serif;
-  --font-body: "Open Sans", sans-serif;
-  --font-ui: "Proza Libre", sans-serif;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
-}
-
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-ui);
+  background: #0b1e3f;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.fade {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity .8s ease, transform .8s ease;
-}
-
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#root {
+.page {
   min-height: 100vh;
 }
