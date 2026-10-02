@@ -10,13 +10,12 @@ import Projects from "./components/sections/Projects";
 // import Experience from "./components/sections/Experience";
 import BeyondCode from "./components/sections/BeyondCode";
 import Contact from "./components/sections/Contact";
-import MagicCursor from "./components/ui/MagicCursor";
 import FadeIn from "../src/components/ui/FadeIn";
 
 function App() {
   return (
     <div className="page">
-      <MagicCursor />
+      
       <Navbar />
       {
         <main>
