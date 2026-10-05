@@ -1,0 +1,205 @@
+.contact {
+  padding: var(--section-pad) 8vw;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 56px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* left: text + email */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  min-width: 0;
+}
+
+.contact-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(36px, 5vw, 68px);
+  letter-spacing: -0.03em;
+}
+
+.contact-title span {
+  color: var(--blue);
+}
+
+.contact-text {
+  max-width: 420px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(232, 240, 255, 0.7);
+}
+
+/* "contact me at -" where the dash draws itself */
+.contact-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+  font-weight: 300;
+  font-size: 16px;
+  color: rgba(232, 240, 255, 0.55);
+}
+
+.contact-dash {
+  display: inline-block;
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--blue), transparent);
+  transform-origin: left;
+  animation: dash 2.4s ease-in-out infinite;
+}
+
+@keyframes dash {
+  0%   { transform: scaleX(0.15); opacity: 0.4; }
+  60%  { transform: scaleX(1);    opacity: 1; }
+  100% { transform: scaleX(0.15); opacity: 0.4; }
+}
+
+/* the email: letters react to the cursor */
+.contact-email {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  max-width: 100%;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(15px, 1.5vw, 19px);
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.contact-email:hover {
+  border-color: rgba(106, 169, 255, 0.45);
+  background: rgba(106, 169, 255, 0.07);
+}
+
+.contact-email:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 6px;
+  border-radius: 10px;
+}
+
+.contact-letter {
+  --p: 0;
+  display: inline-block;
+  white-space: pre;
+  color: color-mix(in srgb, var(--blue) calc(var(--p) * 100%), var(--text));
+  transform: translateY(calc(var(--p) * -4px)) scale(calc(1 + var(--p) * 0.12));
+  text-shadow: 0 0 calc(var(--p) * 14px) var(--blue);
+  transition: color 0.15s ease, transform 0.15s ease, text-shadow 0.15s ease;
+}
+
+.contact-hint {
+  min-height: 1.5em;
+  font-size: 14px;
+  color: rgba(232, 240, 255, 0.5);
+}
+
+.contact-hint a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.contact-hint a:hover {
+  text-decoration: underline;
+}
+
+.contact-copied {
+  color: var(--blue);
+}
+
+/* right: constellation */
+.contact-sky {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.contact-line {
+  fill: none;
+  stroke: rgba(160, 190, 255, 0.3);
+  stroke-width: 1;
+  stroke-dasharray: 3 6;
+}
+
+.dust {
+  fill: rgba(200, 220, 255, 0.6);
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+.contact-star {
+  cursor: pointer;
+  outline: none;
+}
+
+.contact-star .halo {
+  fill: var(--blue);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact-star .core {
+  fill: #fff;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.contact-star text {
+  fill: rgba(232, 240, 255, 0.6);
+  font-size: 15px;
+  font-family: var(--font-body);
+  transition: fill 0.25s ease;
+}
+
+.contact-star:hover .halo,
+.contact-star:focus-visible .halo {
+  opacity: 0.35;
+}
+
+.contact-star:hover text,
+.contact-star:focus-visible text {
+  fill: var(--blue);
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.3; }
+}
+
+/* mobile: stack, constellation goes below */
+@media (max-width: 800px) {
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-sky {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-dash,
+  .contact-star .core,
+  .dust {
+    animation: none;
+  }
+
+  .contact-letter {
+    transition: none;
+  }
+}

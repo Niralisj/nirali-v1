@@ -1,0 +1,24 @@
+.blip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  will-change: transform;
+}
+
+.blip-sprite {
+  display: block;
+  background-size: 256px 384px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  user-select: none;
+  pointer-events: none;
+}
